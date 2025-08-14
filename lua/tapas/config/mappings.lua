@@ -13,6 +13,9 @@ map("n", "<C-l>", "<C-w>l", opts)
 map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 
+map({ "i", "x", "n", "s" }, "<C-s>", "<cmd>w<cr><esc>", { desc = "Save File" })
+map({ "i", "x", "n", "s" }, "<C-S>", "<cmd>wa<cr><esc>", { desc = "Save File" })
+
 -- =====================
 -- Lazy plugin keymaps (load after plugin is ready)
 -- =====================
@@ -40,6 +43,21 @@ local plugin_keys = {
         map("n", "<S-Tab>", "<cmd>bprevious<CR>", opts)
         map("n", "<leader>bt", "<cmd>BufferTabsToggle<CR>", opts)
         map("n", "<leader>bd", utils.smart_delete_buffer, opts)
+    end,
+
+    ["telescope.nvim"] = function()
+        map("n", "<leader>ff", "<cmd>Telescope find_files<CR>", opts)
+        map("n", "<leader>fg", "<cmd>Telescope live_grep<CR>", opts)
+        map("n", "<leader>fb", "<cmd>Telescope buffers<CR>", opts)
+        map("n", "<leader>fh", "<cmd>Telescope help_tags<CR>", opts)
+        map("n", "<leader>fo", "<cmd>Telescope oldfiles<CR>", opts)
+        map("n", "<leader>fc", "<cmd>Telescope commands<CR>", opts)
+        map("n", "<leader>fr", "<cmd>Telescope resume<CR>", opts)
+        map("n", "<leader>ft", "<cmd>Telescope treesitter<CR>", opts)
+    end,
+
+    ["cheatsheet.nvim"] = function()
+        map("n", "<leader>?", "<cmd>Cheatsheet<CR>", opts)
     end,
 }
 
