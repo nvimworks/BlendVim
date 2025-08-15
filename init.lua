@@ -1,5 +1,5 @@
-require("tapas.config.options")
-require("tapas.config.mappings")
+require("blend.config.options")
+require("blend.config.mappings")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -21,7 +21,7 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
   spec = {
     -- import your plugins
-    { import = "tapas.plugins" },
+    { import = "blend.plugins" },
     { import = "custom.plugins" },
   },
   -- Configure any other settings here. See the documentation for more details.

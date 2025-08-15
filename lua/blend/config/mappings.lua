@@ -1,4 +1,4 @@
-local utils = require("tapas.config.utils")
+local utils = require("blend.config.utils")
 
 local map = vim.keymap.set
 local opts = { noremap = true, silent = true }
