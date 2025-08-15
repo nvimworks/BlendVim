@@ -1,5 +1,7 @@
 require("blend.config.options")
+require("custom.config.options")
 require("blend.config.mappings")
+require("custom.config.mappings")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
